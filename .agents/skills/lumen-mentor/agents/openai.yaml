@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lumen 导师"
+  short_description: "根据仓库进度指导 Lumen 的下一小步和代码审查"
+  default_prompt: "Use $lumen-mentor to recover Lumen progress and assign the next learning task."
