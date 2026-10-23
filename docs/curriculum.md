@@ -16,11 +16,11 @@
 
 ## 阶段 0：工程底座
 
-安装 Go 1.27 并把 `go.mod` 改到该版本。然后做模块、Compose 里的 PostgreSQL 和 Redis、配置、`log/slog`、lint、`go test -race`。
+系统默认 Go 保持 1.24。本仓库通过 `go.mod` 的 toolchain 使用 1.27.2，见 ADR 0002。然后做模块、Compose 里的 PostgreSQL 和 Redis、配置、`log/slog`、lint、`go test -race`。
 
 验收：`make up && make test && make lint` 能重复跑。
 
-在升级完成前，不使用泛型方法、`encoding/json/v2`、`testing/synctest` 或 `goroutineleak`。前两个是 Go 1.27 的内容，后两个从 1.25 起可用；这个仓库现在按 1.24 初始化。
+泛型方法和 `encoding/json/v2` 只在本仓库使用。不要改全局 PATH。
 
 ## 阶段 1：身份与多租户
 

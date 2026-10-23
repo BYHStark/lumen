@@ -45,7 +45,7 @@ metadata:
 - 业务表和查询都带租户约束。
 - HTTP 用 `net/http` + chi，不用 Gin、Kratos 或 go-zero 当骨架。
 - 请求路径禁止 `context.Background()`。禁止忽略 error。
-- 本机在装上 Go 1.27 之前，`go.mod` 保持现有版本。不要使用泛型方法、`encoding/json/v2` 或 `goroutineleak`。装好后由用户改 `go` 行，再把这些放进对应阶段。
+- 系统默认 `go` 保持 Homebrew 1.24。本仓库用 `go.mod` 的 toolchain 行使用 1.27。不要改 `/opt/homebrew/bin/go`，也不要把 `/usr/local/go/bin` 加进全局 PATH。
 
 ## 阶段完成
 
